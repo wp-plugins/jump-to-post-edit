@@ -4,7 +4,7 @@ Donate link:
 Tags: post, edit, admin
 Requires at least: 3.3
 Tested up to: 3.4.2
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -36,6 +36,8 @@ No FAQ with this release... so far.
 
 
 == Changelog ==
+
+12/19/2012:  Version 1.0.3 - Added condition to `jump-to-post-edit.php` for `post_type` so that this feature only appears on your Edit Post screen.
 
 12/18/2012:  Version 1.0.2 - Instead of creating a new custom meta box to perform this action, this plugin now adds a section to the "Publish" area of the "Edit Post" screen.
 			~ This update fixes the problems occurring with use of the previous versions (custom meta data and permalink information, etc. is now read/write accessible again)
