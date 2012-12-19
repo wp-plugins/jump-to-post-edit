@@ -2,10 +2,10 @@
 /*
 Plugin Name: Jump to - Post Edit
 Plugin URI: http://www.runwalkweb.com/wp/?page_id=30
-Description: Adds an option to the "Edit Post" screen, allowing the user to easily choose another post to edit without leaving the "Edit Post" screen.
-Version: 1.0.1
+Description: Adds an option to the "Edit Post" screen, allowing the user to easily choose another post to edit by clicking a link to that post's edit screen.
+Version: 1.0.2
 Author: zach_rww
-Author URI: http://www.runwalkweb.com
+Author URI: http://www.runwalkweb.com/wp
 License: GPL2
 */
 
@@ -25,80 +25,51 @@ License: GPL2
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-add_action('admin_menu', 'jump_to_post_edit_box');
+add_action( 'post_submitbox_misc_actions', 'jump_to_post_edit_option' );
+function jump_to_post_edit_option()
+{
+    ?>
 
-	function jump_to_post_edit_box() {
-		add_meta_box('post_info', 'Jump to - Post Edit', 'jump_to_post_edit_info', 'post', 'side', 'high');
-	}
+<link rel='stylesheet' href='<?php echo plugins_url( 'jump-to-post-edit/jump-to-post-edit.css' ); ?>' type='text/css' media='all' />
+    
 
-	//Adds the actual option box
-	function jump_to_post_edit_info() {
-		global $post;
-		?>
-<fieldset id="jump_to_post_edit-div">
-<div>
+<div id="jump-to-post-edit-div">
 <p>
 
-<label for="jump_to_post_edit">Choose Post:</label><br />
-<select name="jump_to_post_edit" onchange='document.location.href=this.options[this.selectedIndex].value;'>
-<option<?php selected( get_post_meta($post->ID, 'jump_to_post_edit', true), 'none' ); ?>><?php echo esc_attr( __( 'Select post' ) ); ?></option>
+<div id="jump-to-post-edit-title"><label for="jump_to_post_edit"><strong>Jump to - Post Edit</strong>:</label><br />
+<div id="jump-to-post-edit-list">
+<font style="font-size: 9pt; color: #555;"><em>published posts noted by:</em> &#10003</font><br>
 <?php $args = array(
 	'numberposts'     => -1,
 	'offset'          => 0,
-/*    'category'        => , */
 	'orderby'         => 'post_date',
 	'order'           => 'DESC',
-/*    'include'         => , */
-/*    'exclude'         => , */
-/*    'meta_key'        => , */
-/*    'meta_value'      => , */
 	'post_type'       => 'post',
-/*    'post_mime_type'  => , */
-/*    'post_parent'     => , */
 	'post_status'     => 'any',
 	'suppress_filters' => true );
 	
-$posts = get_posts($args); 
+$jumptoposts = get_posts($args); 
 $blog_home = home_url();
-	foreach ( $posts as $post ) {
-		$post_title_value = substr($post->post_title,0,18).'...';
-		$option = '<option value="' . $blog_home . '/wp-admin/post.php?post=' . $post->ID . '&action=edit">';
-			if ( $post->post_status == 'publish' ) {
-				$option .= '&#10003; ';
+	foreach ( $jumptoposts as $jumptopost ) {
+		$post_title_value = substr($jumptopost->post_title,0,26).'...';
+		$postlink = '<a href="' . $blog_home . '/wp-admin/post.php?post=' . $jumptopost->ID . '&action=edit" title="' .$jumptopost->post_title.' (post ID: ' .$jumptopost->ID. ')">';
+			if ( $jumptopost->post_status == 'publish' ) {
+				$postlink .= '&#10003; ';
 			}
 			else {
-				$option .= '[' . $post->post_status . '] ';
+				$postlink .= '[' . $jumptopost->post_status . '] ';
 			}
-		$option .= $post_title_value;
-		$option .= '</option>';
-		echo $option;
+		$postlink .= $post_title_value;
+		$postlink .= '</a>';
+		echo '<span class="jump-to-post-edit-option">' .$postlink. '</span>';
 	}
+wp_reset_query();
 ?>
-</select><br />
+</div>
+</div>
 
 </p>
 </div>
-</fieldset>
-		<?php }
-
-add_action('save_post', 'jtposti_save');
-	function jtposti_save($postID){
-	// called after a post or page is saved
-		if($parent_id = wp_is_post_revision($postID)) {
-			$postID = $parent_id;
-		}
-
-	if ($_POST['jump_to_post_edit']) {
-		update_jtposti_meta($postID, $_POST['jump_to_post_edit'], 'jump_to_post_edit');
-	}
+	<?php
 }
-
-	function update_jtposti_meta($postID, $newvalue, $field_name) {
-	// To create new meta
-		if(!get_post_meta($postID, $field_name)){
-			add_post_meta($postID, $field_name, $newvalue);
-		}else{
-	// or to update existing meta
-		update_post_meta($postID, $field_name, $newvalue);
-		}
-	}
+?>

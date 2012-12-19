@@ -4,16 +4,16 @@ Donate link:
 Tags: post, edit, admin
 Requires at least: 3.3
 Tested up to: 3.4.2
-Stable tag: 1.0.1
+Stable tag: 1.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Adds an option to the "Edit Post" screen, allowing the user to easily choose another post to edit without leaving the "Edit Post" screen.
+Adds an option to the "Edit Post" screen, allowing the user to easily choose another post to edit by clicking a link to that post's edit screen.
 
 
 == Description ==
 
-Adds an option to the "Edit Post" screen, allowing the user to easily choose another post to edit without leaving the "Edit Post" screen.
+Adds an option to the "Edit Post" screen, allowing the user to easily choose another post to edit by clicking a link to that post's edit screen.
 
 
 == Installation ==
@@ -30,11 +30,18 @@ No FAQ with this release... so far.
 
 == Screenshots ==
 
-1. [jump-to-post-edit-screenshot1.jpg]
-(http://www.runwalkweb.com/wp-plugins/screenshots/jump-to-post-edit-screenshot1.jpg)
+1. [screenshot-1.png]
+(http://www.runwalkweb.com/wp-plugins/jump-to-post-edit/img/screenshot-1.png)
+
+2. [screenshot-2.png]
+(http://www.runwalkweb.com/wp-plugins/jump-to-post-edit/img/screenshot-2.png)
 
 
 == Changelog ==
+
+12/18/2012:  Version 1.0.2 - Instead of creating a new custom meta box to perform this action, this plugin now adds a section to the "Publish" area of the "Edit Post" screen.
+			~ This update fixes the problems occurring with use of the previous versions (custom meta data and permalink information, etc. is now read/write accessible again)
+			~ There is now a Stylesheet file included with this plugin, `jump-to-post-edit.css`.  Feel free to customize the color-scheme, etc. to your liking!
 
 11/28/2012:  Version 1.0.1 - Updated plugin to fix problems occurring upon Posts being saved.
 			~ Custom Meta info was being altered.
