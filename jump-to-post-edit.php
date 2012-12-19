@@ -25,6 +25,8 @@ License: GPL2
     Foundation, Inc., 51 Franklin St, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
+if ( get_post_type() == 'post' ) {
+
 add_action( 'post_submitbox_misc_actions', 'jump_to_post_edit_option' );
 function jump_to_post_edit_option()
 {
@@ -71,5 +73,7 @@ wp_reset_query();
 </p>
 </div>
 	<?php
+}
+
 }
 ?>
