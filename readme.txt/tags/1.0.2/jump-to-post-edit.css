@@ -1,0 +1,8 @@
+#jump-to-post-edit-div { position: relative; background-color: #eaeaea; padding: 6px; z-index: 400; }
+#jump-to-post-edit-title { font-size: 140%; }
+#jump-to-post-edit-list { display: none; }
+#jump-to-post-edit-div:hover #jump-to-post-edit-list { display: block; margin-top: 6px; font-size: 12pt; line-height: 12pt; position: absolute; background-color: #cddddd; border: 1px solid #777; padding: 4px; width: 240px; right: 20px; }
+#jump-to-post-edit-list a:link { display: block; padding: 4px; border: 1px solid #7dbc94; text-decoration: none; background-color: #c8ffcd; }
+#jump-to-post-edit-list a:hover { display: block; padding: 4px; border: 1px solid #6293b2; text-decoration: none; background-color: #c8ffff; }
+.jump-to-post-edit-option { background-color: #c8ffcd; }
+.jump-to-post-edit-option:hover { background-color: #c8ffff; }
