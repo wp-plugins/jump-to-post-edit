@@ -8,7 +8,7 @@ Stable tag: 1.0.4
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Adds an option to the "Edit Post" screen, allowing the user to easily choose another post to edit by clicking a link to that post's edit screen.
+Gives the "Edit Post" screen the ability to jump from one post to another.
 
 
 == Description ==
