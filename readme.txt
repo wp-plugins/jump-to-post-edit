@@ -30,11 +30,9 @@ No FAQ with this release... so far.
 
 == Screenshots ==
 
-1. [screenshot-1.png]
-(http://www.runwalkweb.com/wp-plugins/jump-to-post-edit/img/screenshot-1.png)
+1. [The "Jump to - Post Edit" area will be added to the "Publish" section of your Edit Post screen.]
 
-2. [screenshot-2.png]
-(http://www.runwalkweb.com/wp-plugins/jump-to-post-edit/img/screenshot-2.png)
+2. [Moving the pointer over the "Jump to - Post Edit" area reveals the List of Posts.]
 
 
 == Changelog ==
