@@ -3,7 +3,7 @@
 Plugin Name: Jump to - Post Edit
 Plugin URI: http://www.runwalkweb.com/wp/?page_id=30
 Description: Adds an option to the "Edit Post" screen, allowing the user to easily choose another post to edit by clicking a link to that post's edit screen.
-Version: 1.0.4
+Version: 1.0.5
 Author: zach_rww
 Author URI: http://www.runwalkweb.com/wp
 License: GPL2
