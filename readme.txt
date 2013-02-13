@@ -1,10 +1,10 @@
 === Jump to - Post Edit ===
 Contributors: linkedbinary900
-Donate link: 
+Donate link: http://www.runwalkweb.com/wordpress-plugins/wp-jump-to-post-edit/
 Tags: post, edit, admin
 Requires at least: 3.3
-Tested up to: 3.4.2
-Stable tag: 1.0.5
+Tested up to: 3.5.1
+Stable tag: 1.0.6
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -30,12 +30,14 @@ No FAQ with this release... so far.
 
 == Screenshots ==
 
-1. [The "Jump to - Post Edit" area will be added to the "Publish" section of your Edit Post screen.  (version 1.0.4 shown)]
+1. [The "Jump to - Post Edit" area will be added to the "Publish" section of your Edit Post screen.
 
-2. [Moving the pointer over the "Jump to - Post Edit" area reveals the List of Posts.  (version 1.0.4 shown)]
+2. [Moving the pointer over the "Jump to - Post Edit" area reveals the List of Posts.
 
 
 == Changelog ==
+
+02/12/2013:  Stable with WordPress v 3.5.1
 
 01/25/2012:  Version 1.0.5 - Changed a bit in the CSS file, `jump-to-post-edit.css` which will allow for a scrolling post-list, and moves the list out of the way a bit from the `UPDATE` button in the post-edit screen.
 
@@ -58,5 +60,5 @@ No FAQ with this release... so far.
 
 == Upgrade notice ==
 
-Latest updates will be found at [http://www.runwalkweb.com/wp/?page_id=30]
-(http://www.runwalkweb.com/wp/?page_id=30)
+Latest updates will be found at [http://www.runwalkweb.com/wordpress-plugins/wp-jump-to-post-edit/]
+(http://www.runwalkweb.com/wordpress-plugins/wp-jump-to-post-edit/)
