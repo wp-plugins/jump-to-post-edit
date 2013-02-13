@@ -30,9 +30,9 @@ No FAQ with this release... so far.
 
 == Screenshots ==
 
-1. [The "Jump to - Post Edit" area will be added to the "Publish" section of your Edit Post screen.
+1. [The "Jump to - Post Edit" area will be added to the "Publish" section of your Edit Post screen.]
 
-2. [Moving the pointer over the "Jump to - Post Edit" area reveals the List of Posts.
+2. [Moving the pointer over the "Jump to - Post Edit" area reveals the List of Posts.]
 
 
 == Changelog ==
